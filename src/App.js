@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import './App.css';
 
+import CharacterList from './components/CharacterList'
+
 const App = () => {
     const [character, setCharacter] = useState();
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -22,6 +24,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      { character && <CharacterList characterData={character} /> }
     </div>
   );
 }
